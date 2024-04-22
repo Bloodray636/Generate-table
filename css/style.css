@@ -1,0 +1,182 @@
+:root{
+    --white-bg: #ffffff!important;
+    --color-one-line: rgba(62,65,73,1);
+    --color-two-line: rgba(73,178,180,1);
+    --color-three-line: rgba(71,129,130,1);
+    --gradient-bg: linear-gradient(90deg, var(--color-one-line) 5%, var(--color-two-line) 50%, var(--color-three-line) 100%);
+    --bs-border-color: #aaadb0;
+    --bg-accordion: rgba(73,178,180,1);
+    --transition-collapse: .5s ease;
+    --bg-selected: rgba(73,178,180, 0.5);
+}
+
+@font-face {
+    font-family: "Source Sans ExtraLight";
+    src: url(../fonts/static/SourceSans3-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Light";
+    src: url(../fonts/static/SourceSans3-Light.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Regular";
+    src: url(../fonts/static/SourceSans3-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Medium";
+    src: url(../fonts/static/SourceSans3-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Bold";
+    src: url(../fonts/static/SourceSans3-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans ExtraBold";
+    src: url(../fonts/static/SourceSans3-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Black";
+    src: url(../fonts/static/SourceSans3-Black.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Source Sans Regular"!important;
+    background: var(--gradient-bg);
+}
+
+.selected {
+    background-color: var(--bg-selected)!important;
+}
+
+.generator-table{
+    max-width: 800px;
+    margin: 100px 0px;
+    background-color: var(--white-bg);
+    border-radius: 30px;
+    padding: 40px;
+}
+
+textarea{
+    resize: none!important;
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+}
+
+textarea, input, table{
+    --bs-border-color:#aaadb0!important;
+}
+
+.settings{
+    background-color: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(100px);
+    height: 300px;
+    padding: 30px 24px 30px 60px;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 0px 0.375rem 0.375rem 0px;
+    box-shadow: 0px 4px 52px 6px;
+    z-index: 9;
+}
+
+.accordion-button{
+    padding: 16px 8px!important;
+    font-size: 0.8rem!important;
+}
+
+.accordion-item:last-of-type, .accordion-item:first-of-type, .accordion-item:first-of-type .accordion-button, .accordion-item:last-of-type .accordion-button.collapsed{
+    border-radius: 0px 0.375rem 0.375rem  0px
+}
+
+.accordion-button:not(.collapsed){
+    color: #000!important;
+    background-color: transparent!important;
+}
+
+.accordion-button::after{
+    background-size: contain!important;
+    transform: rotate(-90deg);
+    width: 1rem!important;
+}
+
+.accordion-button:not(.collapsed)::after{
+    transform: rotate(0deg)!important;
+}
+
+.collapsing{
+    transition: var(--transition-collapse)!important;
+}
+
+.accordion-body{
+    padding: 1rem 8px!important;
+}
+
+button svg{
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    margin-right: 16px;
+}
+
+nav button{
+    width: 100%;
+    height: 40px;
+    padding: 0px!important;
+    margin-bottom: 8px;
+}
+
+nav button:hover svg{
+    fill: #000;
+}
+
+nav button svg{
+    width: 20px;
+    height: 20px;
+    fill: #4b4b4b;
+    margin-right: 0px;
+    transition: .5s ease;
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    background-color: var(--white-bg);
+    width: 100%;
+    height: auto;
+    max-width: 50px;
+    border-radius: 0px 0.375rem 0.375rem 0px;
+}
+
+.form-check-input:checked{
+    background-color: #000!important;
+    border-color: #000!important;
+}
+
+.form-check-input:focus{
+    border-color: #000!important;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
