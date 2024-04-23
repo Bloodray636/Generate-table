@@ -1,0 +1,13 @@
+:root {
+    --white-bg: #ffffff!important;
+    --color-one-line: rgba(62, 65, 73, 1);
+    --color-two-line: rgba(73, 178, 180, 1);
+    --color-three-line: rgba(71, 129, 130, 1);
+    --gradient-bg: linear-gradient(90deg, var(--color-one-line) 5%, var(--color-two-line) 50%, var(--color-three-line) 100%);
+    --bs-border-color: #8f8f8f!important;
+    --bg-accordion: rgba(73, 178, 180, 1);
+    --transition-collapse: .5s ease;
+    --bg-selected: rgba(73, 178, 180, 0.5);
+    --svg-light: #fff;
+    --bg-dark: #000;
+}

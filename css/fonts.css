@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Source Sans ExtraLight";
+    src: url(../fonts/static/SourceSans3-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Light";
+    src: url(../fonts/static/SourceSans3-Light.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Regular";
+    src: url(../fonts/static/SourceSans3-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Medium";
+    src: url(../fonts/static/SourceSans3-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Bold";
+    src: url(../fonts/static/SourceSans3-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans ExtraBold";
+    src: url(../fonts/static/SourceSans3-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Source Sans Black";
+    src: url(../fonts/static/SourceSans3-Black.ttf);
+}

@@ -1,13 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var colorInput = document.getElementById('borderColor');
-    colorInput.addEventListener("input", function() {
+    document.getElementById('borderColor').addEventListener("input", function() {
         var borderColor = this.value;
-        var cells = document.querySelectorAll('#myTable td');
-        cells.forEach(function(cell) {
-            cell.style.borderColor = borderColor;
-        });
-        var table = document.getElementById('myTable');
-        table.style.borderColor = borderColor;
+        document.querySelectorAll('#myTable td').forEach(cell => cell.style.borderColor = borderColor);
+        document.getElementById('myTable').style.borderColor = borderColor;
         updateCode();
     });
 });

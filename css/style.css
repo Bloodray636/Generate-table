@@ -1,50 +1,8 @@
-:root {
-    --white-bg: #ffffff!important;
-    --color-one-line: rgba(62, 65, 73, 1);
-    --color-two-line: rgba(73, 178, 180, 1);
-    --color-three-line: rgba(71, 129, 130, 1);
-    --gradient-bg: linear-gradient(90deg, var(--color-one-line) 5%, var(--color-two-line) 50%, var(--color-three-line) 100%);
-    --bs-border-color: #8f8f8f!important;
-    --bg-accordion: rgba(73, 178, 180, 1);
-    --transition-collapse: .5s ease;
-    --bg-selected: rgba(73, 178, 180, 0.5);
-    --svg-light: #fff;
-    --bg-dark: #000;
-}
+@import url("var.css");
+@import url("fonts.css");
 
-@font-face {
-    font-family: "Source Sans ExtraLight";
-    src: url(../fonts/static/SourceSans3-ExtraLight.ttf);
-}
-
-@font-face {
-    font-family: "Source Sans Light";
-    src: url(../fonts/static/SourceSans3-Light.ttf);
-}
-
-@font-face {
-    font-family: "Source Sans Regular";
-    src: url(../fonts/static/SourceSans3-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Source Sans Medium";
-    src: url(../fonts/static/SourceSans3-Medium.ttf);
-}
-
-@font-face {
-    font-family: "Source Sans Bold";
-    src: url(../fonts/static/SourceSans3-Bold.ttf);
-}
-
-@font-face {
-    font-family: "Source Sans ExtraBold";
-    src: url(../fonts/static/SourceSans3-ExtraBold.ttf);
-}
-
-@font-face {
-    font-family: "Source Sans Black";
-    src: url(../fonts/static/SourceSans3-Black.ttf);
+a {
+    text-decoration: none!important;
 }
 
 * {
@@ -89,7 +47,7 @@ textarea {
 }
 
 .settings {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--white-bg);
     backdrop-filter: blur(100px);
     height: 300px;
     padding: 30px 24px 30px 60px;
@@ -111,7 +69,7 @@ textarea {
 }
 
 .accordion-button:not(.collapsed) {
-    color: #000!important;
+    color: var(--bg-dark)!important;
     background-color: transparent!important;
 }
 
@@ -193,6 +151,12 @@ td {
     padding: 8px;
 }
 
-.nav-setting{
+.nav-setting {
     margin-top: 100px;
+}
+
+footer {
+    backdrop-filter: blur(100px);
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
