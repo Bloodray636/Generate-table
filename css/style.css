@@ -47,6 +47,7 @@ textarea {
 }
 
 .settings {
+    left: -12px;
     background-color: var(--white-bg);
     backdrop-filter: blur(100px);
     height: 300px;
@@ -106,7 +107,7 @@ nav button {
 }
 
 nav button:hover svg {
-    fill: var(--bg-dark);
+    fill: var(--bg-accordion);
 }
 
 nav button svg {
@@ -120,7 +121,7 @@ nav button svg {
 nav {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -12px;
     width: 100%;
     z-index: 999999;
     background-color: var(--white-bg);
