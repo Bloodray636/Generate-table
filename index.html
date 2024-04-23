@@ -12,8 +12,8 @@
         <main>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="position-absolute top-25 start-25">
-                        <div class="position-relative">
+                    <div class="fixed-top top-25 start-25">
+                        <div class="nav-setting position-relative">
                           <nav>
                             <button class="btn text-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
                                 <svg viewBox="0 0 512.02235 512">
@@ -85,8 +85,12 @@
                             <h4 class="mb-5 text-center">Настройки цвета</h4>
                             <div class="content-align">
                               <div class="form-check mb-4 d-flex align-items-center justify-content-between ps-0 ">
-                                <label for="exampleColorInput" class="form-label mb-0">Цвет границы:</label>
-                                <input type="color" class="form-control border-0 shadow p-2 form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+                                <label for="borderColor" class="form-label mb-0">Цвет границы:</label>
+                                <input type="color" class="form-control border-0 shadow p-2 form-control-color" id="borderColor" value="#563d7c" title="Choose your color">
+                              </div>
+                              <div class="form-check mb-4 d-flex align-items-center justify-content-between ps-0 ">
+                                <label for="textColor" class="form-label mb-0">Цвет текста:</label>
+                                <input type="color" class="form-control border-0 shadow p-2 form-control-color" id="textColor" value="#563d7c" title="Choose your color">
                               </div>
                             </div>
                           </div>
@@ -107,7 +111,10 @@
                             </form>
                             <button type="button" onclick="generateTable()" class="btn mt-4 w-100 bg-dark text-white">Создать таблицу</button>
                             <div id="tableContainer" class="mt-5"></div>
-                            <textarea class="form-control shadow-none mt-5" id="codeContainer" rows="10" cols="50"></textarea>
+                            <h5 class="mb-3 mt-5">Код HTML:</h5>
+                            <textarea class="form-control shadow-none mt-2" id="codeContainer" rows="10" cols="50"></textarea>
+                            <h5 class="mb-3 mt-5">Код CSS:</h5>
+                            <textarea class="form-control shadow-none mt-2" id="codeStyleContainer" rows="10" cols="50"></textarea>
                         </div>
                     </div>
                 </div>
@@ -117,6 +124,7 @@
     </body>
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap/script/bootstrap.bundle.min.js"></script>
+    <script src="script/textColor.js"></script>
     <script src="script/borderColor.js"></script>
     <script src="script/textAlign.js"></script>
     <script src="script/mergeCells.js"></script>
