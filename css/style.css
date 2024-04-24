@@ -150,6 +150,7 @@ td {
     border: 1px solid var(--bs-border-color);
     text-align: left;
     padding: 8px;
+    max-width: 20px;
 }
 
 .nav-setting {
@@ -160,4 +161,17 @@ footer {
     backdrop-filter: blur(100px);
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container-css button, .container-html button{
+    width: 24px;
+    height: 24px;
+    top: 50px;
+    right: 10px;
+}
+
+.generator-table button svg{
+    width: 16px;
+    height: 16px;
+    fill: #000;
 }

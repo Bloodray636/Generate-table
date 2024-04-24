@@ -111,10 +111,26 @@
                             </form>
                             <button type="button" onclick="generateTable()" class="btn mt-4 w-100 bg-dark text-white">Создать таблицу</button>
                             <div id="tableContainer" class="mt-5"></div>
-                            <h5 class="mb-3 mt-5">Код HTML:</h5>
-                            <textarea class="form-control shadow-none mt-2" id="codeContainer" rows="10" cols="50"></textarea>
-                            <h5 class="mb-3 mt-5">Код CSS:</h5>
-                            <textarea class="form-control shadow-none mt-2" id="codeStyleContainer" rows="10" cols="50"></textarea>
+                            <div class="container-html position-relative">
+                              <h5 class="mb-3 mt-5">Код HTML:</h5>
+                              <textarea class="form-control shadow-none mt-2" id="codeContainer" rows="10" cols="50"></textarea>
+                              <button class="btn border-0 shadow-none p-0 position-absolute" onclick="copyToClipboard('codeContainer')">
+                                <svg xml:space="preserve" viewBox="0 0 512 512">
+                                  <path d="M480 96H128c-17.673 0-32 14.327-32 32v352c0 17.673 14.327 32 32 32h352c17.673 0 32-14.327 32-32V128c0-17.673-14.327-32-32-32zm0 384H128V128h352v352z"/>
+                                  <path d="M32 32h352v32h32V32c0-17.673-14.327-32-32-32H32C14.327 0 0 14.327 0 32v352c0 17.673 14.327 32 32 32h32v-32H32V32z"/>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="container-css position-relative">
+                              <h5 class="mb-3 mt-5">Код CSS:</h5>
+                              <textarea class="form-control shadow-none mt-2" id="codeStyleContainer" rows="10" cols="50"></textarea>
+                              <button class="btn border-0 shadow-none p-0 position-absolute" onclick="copyToClipboard('codeStyleContainer')">
+                                <svg xml:space="preserve" viewBox="0 0 512 512">
+                                  <path d="M480 96H128c-17.673 0-32 14.327-32 32v352c0 17.673 14.327 32 32 32h352c17.673 0 32-14.327 32-32V128c0-17.673-14.327-32-32-32zm0 384H128V128h352v352z"/>
+                                  <path d="M32 32h352v32h32V32c0-17.673-14.327-32-32-32H32C14.327 0 0 14.327 0 32v352c0 17.673 14.327 32 32 32h32v-32H32V32z"/>
+                                </svg>
+                              </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -126,6 +142,7 @@
     </body>
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap/script/bootstrap.bundle.min.js"></script>
+    <script src="script/copyHtml.js"></script>
     <script src="script/textColor.js"></script>
     <script src="script/borderColor.js"></script>
     <script src="script/textAlign.js"></script>

@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelectorAll('td').forEach(function(cell) {
                 cell.style.textAlign = alignment;
             });
+            updateCode();
         });
     });
 });
