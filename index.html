@@ -124,17 +124,23 @@
                     <div class="col-12">
                         <div class="generator-table w-100 mx-auto">
                             <h1 class="text-center mb-5 text-dark">Генератор таблиц</h1>
-                            <form>
+                            <form class="needs-validation" novalidate>
                                 <div class="form-floating">
-                                    <input type="number" class="form-control shadow-none" value="3" min="1" id="rowsInput" placeholder="Количество строк">
+                                    <input type="number" class="form-control shadow-none" value="3" min="1" id="rowsInput" placeholder="Количество строк" required>
                                     <label for="rows">Количество строк:</label>
+                                    <div class="invalid-feedback">
+                                      Максимальное количество строк: 100
+                                    </div>
                                 </div>
                                 <div class="form-floating mt-3">
-                                    <input type="number" class="form-control shadow-none" value="3" min="1" id="colsInput" placeholder="Количество столбцов">
+                                    <input type="number" class="form-control shadow-none" value="3" min="1" id="colsInput" placeholder="Количество столбцов" required>
                                     <label for="cols">Количество столбцов:</label>
+                                    <div class="invalid-feedback">
+                                      Максимальное количество столбцов: 100
+                                    </div>
                                 </div>
+                                <button type="submit" class="btn mt-4 w-100 bg-dark text-white">Создать таблицу</button>
                             </form>
-                            <button type="button" onclick="generateTable()" class="btn mt-4 w-100 bg-dark text-white">Создать таблицу</button>
                             <div id="tableContainer" class="mt-5"></div>
                             <div class="container-html position-relative">
                               <h5 class="mb-3 mt-5">Код HTML:</h5>
@@ -167,6 +173,7 @@
     </body>
     <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/bootstrap/script/bootstrap.bundle.min.js"></script>
+    <script src="script/validForm.js"></script>
     <script src="script/addRowCol.js"></script>
     <script src="script/collapseMenu.js"></script>
     <script src="script/copyHtml.js"></script>
