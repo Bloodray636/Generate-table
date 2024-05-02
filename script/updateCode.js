@@ -38,6 +38,6 @@ function updateCode() {
     `;
     codeStyleContainer.value = codeStyle;
 
-    const tableHtml = `<table class='table table-bordered'>${[...tableElement.rows].map(row => `<tr>${[...row.cells].map(cell => `<td${cell.rowSpan > 1 ? " rowspan='" + cell.rowSpan + "'" : ""}${cell.colSpan > 1 ? " colspan='" + cell.colSpan + "'" : ""}>${cell.textContent}</td>`).join('')}</tr>`).join('')}</table>`;
+    const tableHtml = `<table class='table table-bordered'><tbody>${[...tableElement.rows].map(row => `<tr>${[...row.cells].map(cell => `<td${cell.rowSpan > 1 ? " rowspan='" + cell.rowSpan + "'" : ""}${cell.colSpan > 1 ? " colspan='" + cell.colSpan + "'" : ""}>${cell.textContent}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
     codeContainer ? codeContainer.value = formatHtml(tableHtml) : console.error("Ошибка: Контейнер для кода не найден.");
 }

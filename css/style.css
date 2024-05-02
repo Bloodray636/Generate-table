@@ -63,7 +63,7 @@ textarea {
     left: -12px;
     background-color: var(--white-bg);
     backdrop-filter: blur(100px);
-    height: 300px;
+    height: auto;
     padding: 30px 24px 30px 60px;
     max-width: 350px;
     width: 100%;
