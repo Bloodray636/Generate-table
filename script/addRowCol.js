@@ -4,8 +4,16 @@ function addRowOrColumn(type) {
         console.error("Ошибка: Таблица не найдена.");
         return;
     }
+    
     const numRows = table.rows.length;
     const numCols = numRows > 0 ? table.rows[0].cells.length : 0;
+
+    if ((type === "row" && numRows >= 100) || (type === "column" && numCols >= 100)) {
+        console.error("Ошибка: Превышено максимальное количество строк или столбцов.");
+        return;
+    }
+    
+    // Добавляем строку или столбец
     if (type === "row") {
         const newRow = table.insertRow();
         for (let i = 0; i < numCols; i++) {
